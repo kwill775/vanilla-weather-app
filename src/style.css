@@ -43,20 +43,24 @@ a {
   text-align: left;
   padding: 50px;
   margin: 0;
+  font-size: 50px;
 }
 .weather-icon {
   margin-bottom: 50px;
 }
 .weather-app-city {
-  font-size: 22px;
+  font-size: 26px;
+  margin-bottom: 0;
 }
-.date-time {
+.day-time {
   padding: 10px;
+  font-size: 18px;
 }
 .weather-app-details {
   display: flex;
   justify-content: space-between;
   margin: 30px;
+  font-size: 18px;
 }
 .weather-app-details strong {
   color: #c9180b;

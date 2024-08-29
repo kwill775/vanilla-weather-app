@@ -11,8 +11,11 @@ function changeWeather(response) {
   let speed = response.data.wind.speed;
   let timeElement = document.querySelector("#day-time");
   let date = new Date(response.data.time * 1000);
+  let iconElement = document.querySelector("#icon");
+  let icon = `<img src="${response.data.condition.icon_url}" class="weather-icon" />`;
 
   tempElement.innerHTML = temperature;
+  iconElement.innerHTML = icon;
   cityElement.innerHTML = city;
   timeElement.innerHTML = formatDate(date);
   descriptionElement.innerHTML = descript;

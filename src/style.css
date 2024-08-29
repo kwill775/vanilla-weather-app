@@ -39,3 +39,25 @@ a {
   padding: 15px;
   width: 20%;
 }
+.weather-app-temp {
+  text-align: left;
+  padding: 50px;
+  margin: 0;
+}
+.weather-icon {
+  margin-bottom: 50px;
+}
+.weather-app-city {
+  font-size: 22px;
+}
+.date-time {
+  padding: 10px;
+}
+.weather-app-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+}
+.weather-app-details strong {
+  color: #c9180b;
+}

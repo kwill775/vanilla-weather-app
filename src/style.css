@@ -41,12 +41,14 @@ a {
 }
 .weather-app-temp {
   text-align: left;
-  padding: 50px;
-  margin: 0;
+  margin-top: 50px;
+  margin-bottom: 0;
   font-size: 50px;
 }
 .weather-icon {
-  margin-bottom: 50px;
+  width: 150px;
+  height: 150px;
+  margin: 0;
 }
 .weather-app-city {
   font-size: 26px;

@@ -69,10 +69,19 @@ a {
 .weather-app-details strong {
   color: #c9180b;
 }
+.forecast {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+.day-of-week {
+  padding: 10px;
+}
 .forecast-temps {
   display: flex;
   justify-content: center;
   color: #c9180b;
+  padding: 10px;
 }
 .forecast-temp {
   padding: 0 8px;

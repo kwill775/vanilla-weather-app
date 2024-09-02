@@ -69,8 +69,12 @@ a {
 .weather-app-details strong {
   color: #c9180b;
 }
-.forecast-temp {
+.forecast-temps {
   display: flex;
   justify-content: center;
   color: #c9180b;
+}
+.forecast-temp {
+  padding: 0 8px;
+  font-size: 22px;
 }

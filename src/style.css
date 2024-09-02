@@ -69,3 +69,8 @@ a {
 .weather-app-details strong {
   color: #c9180b;
 }
+.forecast-temp {
+  display: flex;
+  justify-content: center;
+  color: #c9180b;
+}

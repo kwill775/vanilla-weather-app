@@ -59,6 +59,13 @@ function handleSearchSubmit(event) {
   searchCity(city);
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
+
 function getForecast(city) {
   let apiKey = "3tb400c941f2a4edo23f9347ffbbacfd";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
@@ -66,26 +73,29 @@ function getForecast(city) {
 }
 
 function displayForecast(response) {
-  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
   let forecastHtml = "";
 
-  days.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml +
+        `
         <div class="forecast-day">
-            <div class="day-of-week">${day}</div>
-            <div class="forecast-day-icon">☀️</div>
+            <div class="day-of-week">${formatDay(day.time)}</div>
+            <div><img src=${
+              day.condition.icon_url
+            } class="forecast-day-icon" /></div>
             <div class="forecast-temps">
             <div class="forecast-temp">
-                <strong>90°</strong>
+                <strong>${Math.round(day.temperature.maximum)}°</strong>
             </div>
             <div class="forecast-temp">
-                75°
+                ${Math.round(day.temperature.minimum)}°
             </div>
             </div>
         </div>
         `;
+    }
   });
 
   let forecastElement = document.querySelector("#forecast");

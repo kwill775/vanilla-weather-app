@@ -66,6 +66,14 @@ a {
   margin: 20px;
   font-size: 18px;
 }
+
+.forecast-day-icon {
+  width: 48px;
+  height: 48px;
+  display: block;
+  margin: 0 auto;
+}
+
 .weather-app-details strong {
   color: #c9180b;
 }

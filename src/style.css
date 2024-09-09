@@ -40,7 +40,7 @@ a {
   width: 20%;
 }
 .weather-app-temp {
-  font-size: 50px;
+  font-size: 60px;
 }
 .weather-icon {
   width: 150px;
@@ -64,7 +64,7 @@ a {
   display: flex;
   justify-content: space-between;
   margin: 20px;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .forecast-day-icon {
@@ -75,7 +75,7 @@ a {
 }
 
 .weather-app-details strong {
-  color: #c9180b;
+  color: #b99e7b;
 }
 .forecast {
   display: flex;
@@ -88,10 +88,10 @@ a {
 .forecast-temps {
   display: flex;
   justify-content: center;
-  color: #c9180b;
+  color: #b99e7b;
   padding: 10px;
 }
 .forecast-temp {
   padding: 0 8px;
-  font-size: 22px;
+  font-size: 24px;
 }

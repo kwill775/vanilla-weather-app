@@ -21,6 +21,8 @@ function changeWeather(response) {
   descriptionElement.innerHTML = descript;
   humidityElement.innerHTML = humid;
   windSpeedElement.innerHTML = speed;
+
+  getForecast(city);
 }
 
 function formatDate(date) {
@@ -57,7 +59,13 @@ function handleSearchSubmit(event) {
   searchCity(city);
 }
 
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "3tb400c941f2a4edo23f9347ffbbacfd";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
+  axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
   let forecastHtml = "";
 
@@ -88,4 +96,3 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Tucson");
-displayForecast();
